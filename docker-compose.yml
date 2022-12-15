@@ -8,14 +8,14 @@ services:
     volumes:
       - ./mysql/data:/var/lib/mysql
     environment:
-      MYSQL_ROOT_PASSWORD: root
+      MYSQL_ROOT_PASSWORD: e5sub
       MYSQL_DATABASE: e5sub
     restart: always
     container_name: mysql
   e5bot:
     image: iyear/e5subbot
     volumes:
-      - ./e5bot/config.yml:/root/config.yml
-      - ./e5bot/log:/root/log
+      - ./e5sub/config.yml:/root/config.yml
+      - ./e5sub/log:/root/log
     restart: always
-    container_name: e5bot
+    container_name: fle5
